@@ -1,0 +1,18 @@
+
+
+.imageTablet{display: none}
+.imageMobile{display: none;
+}
+.imageDesktop{display:block}
+
+@media (max-width: 768px) {
+    .imageTablet{display: block}
+    .imageMobile{display: none;
+    }
+    .imageDesktop{display:none}
+}
+@media (max-width: 376px) { 
+    .imageTablet{display: none}
+.imageMobile{display: block;
+}
+.imageDesktop{display:none}}

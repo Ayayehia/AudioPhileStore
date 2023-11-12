@@ -1,0 +1,20 @@
+.Header{
+/* width: 1440px; */
+height: 336px;
+flex-shrink: 0;
+background-color:#000;;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.Header h1{
+color: #FFF;
+text-align: center;
+font-family: Manrope;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px; 
+letter-spacing: 1.429px;
+text-transform: uppercase;
+}

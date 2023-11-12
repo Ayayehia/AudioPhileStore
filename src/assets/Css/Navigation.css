@@ -1,0 +1,25 @@
+.navigation {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 32px 0;
+    border-bottom: 1px solid gray;
+  }
+  .navigation #listOfLinks {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 2px;
+  }
+  .navLinks {
+    color: white;
+    cursor: pointer;
+  }
+  .navLinks:hover {
+    color: #d87d4a;
+    text-decoration: none;
+  }
+  

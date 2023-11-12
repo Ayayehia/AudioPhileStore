@@ -1,0 +1,90 @@
+.container{
+display: flex ;
+gap: 4rem;
+margin-top: 1rem;
+
+}
+
+
+.rightSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 8rem 2rem 8rem;
+    border-radius: 1rem;
+    background-color: #F1F1F1;;
+
+}
+.rightSection button {
+width: 160px;
+height: 48px;
+flex-shrink: 0;
+border: 1px solid #000;
+color: #000;
+font-family: Manrope;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1px;
+text-transform: uppercase;
+background-color: rgba(241, 241, 241, -1.4);
+}
+.rightSection button:hover{
+    background: #000;
+    color: white;
+}
+.rightSection h1 {
+color: #000;
+font-family: Manrope;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.imageDesktop{display: block; border-radius: 1rem;}
+.imageTablet{display: none;}
+.imageMobile{display: none}
+
+/* tablet */
+@media (max-width: 1024px) {
+.imageDesktop{display: none}
+.imageTablet{display: block; border-radius: 1rem;}
+.imageMobile{display: none}
+
+    .container{
+        display: flex;
+        gap: 2rem;
+        }
+   
+  
+    .rightSection{
+       padding: 2rem;
+      
+    }
+}
+/* Mobile */
+@media (max-width: 768px) {
+
+    .imageMobile{display: block; border-radius: 1rem;}
+    .imageDesktop{display: none}
+    .imageTablet{display: none;}
+    .container{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        gap: 1rem;
+      
+        }
+        .rightSection{
+            padding: 3rem 2rem 3rem 2rem;
+
+
+        }
+
+       
+}

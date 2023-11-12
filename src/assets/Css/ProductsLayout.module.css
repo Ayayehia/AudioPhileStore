@@ -1,0 +1,207 @@
+.container{ 
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-left: 5%;
+    align-items: center;
+    gap: 22%;
+}
+.singleProductContainer{
+    display: flex;
+    height: 560px;
+    justify-content: space-evenly;
+    margin-top: 12%;
+    align-items: center;
+}
+.leftSection{
+    width: 540px;
+    border-radius: 8px;
+    background: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftSectionSingleProduct{
+    width: 540px;
+    height: 560px;
+    border-radius: 8px;
+    background: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rigthSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* width: 445px; */
+    height: 343px;
+    gap: 8%;
+}
+.rightSectionSingle{  display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8%;
+    width: 445.5px;
+    height: 407px;
+}
+.rightSectionSingle p{
+    width: 445px;
+    font-size: 15px;
+    font-weight: 500;
+line-height: 25px;
+}
+
+.btn{
+width: 160px;
+height: 48px;
+background: #D87D4A;
+color: #FFF;
+font-family: Manrope;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1px;
+text-transform: uppercase;
+border: none;
+}
+.btn:hover{
+    background: #FBAF85;
+}
+.img{
+   width:349.238px;
+   height:386px
+}
+.rightSectionSingle .price{
+color: #000;
+font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1.286px;
+text-transform: uppercase;
+opacity: 1;
+}
+/* Tablet */
+@media (max-width: 1024px){
+
+    .container{ 
+     display: flex;
+     flex-direction: column;
+     height: 706px;
+     justify-content: space-evenly;
+     margin-top: 9%;
+    align-items: center;
+    gap: 0;
+  
+    }
+    .singleProductContainer{
+        height: 480px;}
+    .leftSection{
+        width: 689px;
+        
+    }
+
+        .leftSectionSingleProduct{
+            width: 281px;
+            height: 480px;
+            border-radius: 8px;
+            background: #F1F1F1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rigthSection{
+        justify-content: space-evenly;
+        align-items: center;
+        }
+        .rightSectionSingle{
+            height: 390px;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        gap:8%;
+        text-wrap: wrap;
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+    .rightSectionSingle button {
+    height: 48px;
+    }
+.img{
+    width: 220px;
+    height: 243px;
+ }
+}
+
+
+/* mobile */
+@media (max-width: 768px){
+    .container{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 5%;
+        align-items: center;
+        gap: 0;
+
+    }
+    .singleProductContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7%;
+        height: auto;
+    }
+
+  
+    .leftSection{
+        width: 327px;
+    }
+        .leftSectionSingleProduct{
+            height: 327px;
+            margin-bottom: 4%
+        }
+            .leftSectionSingleProduct img{
+            width: 140.624px;
+            height: 202px;
+            }
+        .rigthSection{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+gap: 24px;
+white-space: wrap; 
+overflow: hidden;   
+text-overflow: ellipsis;
+text-align: center;
+        }
+        .rightSectionSingle{
+            display: flex;
+            width: 327px;
+            height: auto;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 3rem;
+            white-space: wrap;   
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+
+        .rightSectionSingle h1{
+        width: 160px;
+        height: 48px;
+        font-size: 28px;
+        letter-spacing: 1px;
+        width: 327px;
+        }
+        .img{
+ width: 220px;
+height: 243px;
+        }
+}

@@ -1,0 +1,9 @@
+.container{
+width: 768.217px;
+ height:28px; 
+ display:flex;
+ justify-content:space-evenly;
+ align-items:center;
+ background-color:#141414;
+    color:#FFFFFF;
+    padding: 2%;}

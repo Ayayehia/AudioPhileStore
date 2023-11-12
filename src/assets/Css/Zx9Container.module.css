@@ -1,0 +1,151 @@
+.container{
+ display: flex;
+border-radius: 8px;
+padding: 2rem 12rem 2rem 11rem;
+background: #D87D4A;
+}
+
+.rightSection{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+    color: #FFFFFF;
+    font-family: Manrope;
+   
+}
+.rightSection h1{
+    color: #FFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: Manrope;
+/* font-size: 56px; */
+font-style: normal;
+font-weight: 700;
+line-height: 58px; 
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.rightSection p{
+color: #FFF;
+font-family: Manrope;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 25px; 
+opacity: 0.75;
+}
+
+.btn{
+ width: 160px;
+ height: 48px;
+ background-color: #000000;
+ color: #FFFFFF;
+ font-family: Manrope;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 13px 18px 13px 18px;
+margin-top: 7%;
+border: none;
+
+}
+.btn:hover{background: #4C4C4C;}
+.imageDesktop{
+    display: block;
+    z-index: 1000;
+    width: min-content;
+}
+
+
+.imageTablet{
+    display: none;
+}
+.imageMobile{display: none;}
+
+/*Styles for  Tablet devices*/
+
+@media (max-width: 1024px) {
+    .imageMobile{display: none}
+   
+      .imageDesktop{
+      display: none;
+   }
+   .imageTablet{
+       display: block;
+       z-index: 1000;
+       width: min-content;
+
+       /* width: 197.212px;
+   height: 237px; */
+   }
+   .container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 1rem 11rem 1rem 12rem;
+     align-items: center;
+}
+    .rightSection{
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+        font-family: Manrope;
+        align-items: center;
+        font-size: 2rem;
+    }
+    
+   }
+
+
+
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  .container{
+    width: fit-content;
+    padding: 1rem;
+    align-items: center;
+  }
+    .rightSection{
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+        font-family: Manrope;
+        /* align-content: center; */
+        align-items: center;
+    }
+  
+    .rightSection h1{
+font-size: 36px;
+font-style: normal;
+line-height: 40px; 
+letter-spacing: 1.286px;
+margin-left: 36px;
+    }
+    .rightSection p{
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 25px;
+
+    }
+    .btn{
+ /* width: 160px;
+height: 48px; */
+/* margin-left: 46px;
+margin-bottom: 10%; */
+    }
+    .imageMobile{
+        display: block ;
+        z-index: 1000;
+        width: min-content;
+    }
+    .imageDesktop{
+      display: none;
+    }
+    .imageTablet{display: none
+    }
+}
+
