@@ -9,10 +9,9 @@
 }
 .singleProductContainer {
   display: flex;
-  height: 560px;
   justify-content: space-evenly;
-  margin-top: 12%;
   align-items: center;
+  padding: 13rem 4rem 4rem 3rem;
 }
 .leftSection {
   border-radius: 8px;
@@ -23,13 +22,12 @@
   padding: 1rem;
 }
 .leftSectionSingleProduct {
-  width: 540px;
-  height: 560px;
   border-radius: 8px;
   background: #f1f1f1;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 .rigthSection {
   display: flex;
@@ -42,12 +40,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 8%;
-  width: 445.5px;
-  height: 407px;
+  padding: 7rem;
+  gap: 2rem;
 }
 .rightSectionSingle p {
-  width: 445px;
+  /* width: 445px; */
   font-size: 15px;
   font-weight: 500;
   line-height: 25px;
@@ -98,37 +95,39 @@
     gap: 0;
     padding: unset;
   }
+
   .singleProductContainer {
-    height: 480px;
+    padding: 5rem 1rem 5rem 1rem;
   }
+
   .leftSection {
     padding: 2rem 12rem 2rem 12rem;
   }
 
   .leftSectionSingleProduct {
-    width: 281px;
-    height: 480px;
     border-radius: 8px;
     background: #f1f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem 1rem 5rem 1rem;
   }
   .rigthSection {
     justify-content: space-evenly;
     align-items: center;
   }
   .rightSectionSingle {
-    height: 390px;
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8%;
     text-wrap: wrap;
     word-wrap: break-word;
     overflow: hidden;
+    padding: 3rem;
+    gap: 2rem;
   }
+
   .rightSectionSingle button {
     height: 48px;
   }
@@ -153,21 +152,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 7%;
-    height: auto;
+    gap: 2rem;
   }
 
   .leftSection {
     padding: 2rem;
   }
   .leftSectionSingleProduct {
-    height: 327px;
-    margin-bottom: 4%;
+    padding: 2rem;
   }
-  .leftSectionSingleProduct img {
-    width: 140.624px;
-    height: 202px;
-  }
+
   .rigthSection {
     display: flex;
     flex-direction: column;
@@ -182,23 +176,18 @@
   }
   .rightSectionSingle {
     display: flex;
-    width: 327px;
-    height: auto;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-    gap: 3rem;
+    align-items: flex-start;
+    gap: 2rem;
     white-space: wrap;
     text-overflow: ellipsis;
-    text-align: center;
+    padding: 1rem;
   }
 
   .rightSectionSingle h1 {
-    width: 160px;
-    height: 48px;
     font-size: 28px;
     letter-spacing: 1px;
-    width: 327px;
   }
   .img {
     width: 220px;

@@ -49,7 +49,7 @@ const ProductsLayout = ({
         {price && (
           <>
             <p className={Classes.price}>{price}$</p>
-            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+            <div style={{ display: "flex" }}>
               <QuantityContainer Quantity={quantity} ID={data.id} />
               <Link to={`/product/${data.id}`}>
                 <button onClick={addToCart} className={Classes.btn}>
