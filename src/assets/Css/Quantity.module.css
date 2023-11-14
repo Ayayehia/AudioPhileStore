@@ -1,34 +1,39 @@
-.container{
-width: 120px;
-height: 48px;
-background: #F1F1F1;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-margin-right: 5%;
+.container {
+  width: 120px;
+  height: 48px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 5%;
 }
-.sign button{
-    width: 16px;
-    color: black;
-    border: none;
+.sign button {
+  width: 16px;
+  color: black;
+  border: none;
+  background: #f1f1f1;
 }
 
 @media (max-width: 375px) {
-    .container{
-        width: 100px;
-        height: 48px;}
-    
-        button {
+  .container {
+    width: 100px;
+    height: 48px;
+  }
+
+  button {
     width: 30px;
     color: black;
- 
-}}
+    background: #f1f1f1;
+  }
+}
 @media (max-width: 768px) {
-    .container{
-        width: 100px;
-        height: 48px;}
-        button {
+  .container {
+    width: 100px;
+    height: 48px;
+  }
+  button {
     width: 30px;
     color: black;
-   
-}}
+    background: #f1f1f1;
+  }
+}

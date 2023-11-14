@@ -1,105 +1,94 @@
-.firstSection{
-    display: flex;
-    justify-content: space-between;
-    width: 389px;
-    color: #000;
-    margin-bottom: 10%;
-    margin-top: 9%;
-    align-items: center;
+.firstSection {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  align-items: center;
 }
 .firstSection a {
-    color: #000;
-    text-decoration: underline;
+  color: #000;
+  text-decoration: underline;
 }
-.container{
-    display: flex;
-    justify-content: space-around;
-    width: 313px;
-    height: 64px;
-    align-items: center;
-    gap: 25%;
-    margin-bottom: 10%;
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
 }
-.summaryContainer{
-    display: flex;
-    justify-content: space-around;
-    /* width: fit-content; */
-    height: 64px;
-    align-items: flex-start;
-    gap: 25%;
-    margin-bottom: 10%;
+.summaryContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
 }
-.img{
-width: 64px;
-height: 64px;
-border-radius: 8px;
-background: #F1F1F1;
+.CartContainer {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.textSection{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 75px;
-    gap: 2%;
+.img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+  background: #f1f1f1;
 }
-.textSection p{
-    width: 100px;
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.title{
-    color: #000;
-    font-family: Manrope;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 25px;
-    text-wrap: nowrap;
+
+.title {
+  color: #000;
+  font-family: Manrope;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  text-wrap: nowrap;
 }
-.quantityContainer{
-    display: flex;
-    justify-content: space-around;
-    width: 96px;
-    height: 32px;
-    background: #F1F1F1;
-    align-items: center;
-    padding: 5%;
-    margin-left: 18%
+.quantityContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background: #f1f1f1;
+  align-items: center;
+  gap: 1rem;
 }
-.hidequantityContainer{
-    display: none;
+.hidequantityContainer {
+  display: none;
 }
 .btn {
-width: 313px;
-height: 48px;
-background: #D87D4A;
-color: #FFF;
-text-align: center;
-font-family: Manrope;
-font-size: 13px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 1px;
-text-transform: uppercase;
-margin-bottom: 5%;
+  width: 100%;
+  height: 3rem;
+  background: #d87d4a;
+  color: #fff;
+  text-align: center;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.btn:hover{
-    background: #FBAF85;
+.btn:hover {
+  background: #fbaf85;
 }
-a:hover{color: #FBAF85;}
-
-.totalAmount{
-   display: flex;
-   justify-content: space-between;
-   gap: 198px;
-   width: 308px;
-   margin-bottom: 7%;
-   margin-top: 5%;
-   color: #000;
-font-family: Manrope;
-font-size: 15px;
-font-style: normal;
-font-weight: 500;
-line-height: 25px
+a:hover {
+  color: #fbaf85;
 }
 
+.totalAmount {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+}
