@@ -1,14 +1,11 @@
 import Classes from "../assets/Css/CheckOut.module.css";
-import * as React from "react";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
-import { validation } from "../Store/Slices/CheckoutValidationSlice";
-import { useSelector, useDispatch } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const CheckOut = ({ Submitting }) => {
+const CheckOut = ({ Submitting, errorsubmit }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -19,25 +16,43 @@ const CheckOut = ({ Submitting }) => {
   const [paymentMethod, setPaymentMethod] = useState("E-money");
   const [eMoneyNumber, setEMoneyNumber] = useState("");
   const [eMoneyPin, setEMoneyPin] = useState("");
+
+  useEffect(() => {
+    // Validation logic
+    if (
+      !name ||
+      !email ||
+      !phoneNumber ||
+      !address ||
+      !zipCode ||
+      !city ||
+      !country ||
+      !eMoneyNumber ||
+      !eMoneyPin
+    ) {
+      // Set errorsubmit to true
+      errorsubmit(true);
+    } else {
+      // Set errorsubmit to false
+      errorsubmit(false);
+    }
+  }, [
+    name,
+    email,
+    phoneNumber,
+    address,
+    zipCode,
+    city,
+    country,
+    eMoneyNumber,
+    eMoneyPin,
+  ]); // Empty dependency array means this effect runs once when the component mounts
+
   console.log(Submitting, "CHnaging state after submitting");
-  const nameError = useSelector((state) => state.checkout.errors);
 
-  const dispatch = useDispatch();
-
-  const Validation = () => {
-    dispatch(
-      validation({
-        name,
-        email,
-        phoneNumber,
-        address,
-        zipCode,
-        city,
-        country,
-        payment: paymentMethod,
-      })
-    );
-  };
+  const ErrorMessage = (
+    <p className={Classes.errorMessage}>Field can't be empty</p>
+  );
   console.log(name, "name field");
   return (
     <div className={Classes.container}>
@@ -52,7 +67,9 @@ const CheckOut = ({ Submitting }) => {
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 type="text"
+                className={!name && Submitting ? Classes.errorInput : ""}
               />
+              {!name && Submitting && ErrorMessage}
             </div>
 
             <div className={Classes.labelposition}>
@@ -61,7 +78,9 @@ const CheckOut = ({ Submitting }) => {
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 type="text"
+                className={!email && Submitting ? Classes.errorInput : ""}
               />
+              {!email && Submitting && ErrorMessage}
             </div>
           </div>
           <div className={Classes.labelposition}>
@@ -70,7 +89,9 @@ const CheckOut = ({ Submitting }) => {
               onChange={(e) => setPhoneNumber(e.target.value)}
               value={phoneNumber}
               type="text"
+              className={!phoneNumber && Submitting ? Classes.errorInput : ""}
             />
+            {!phoneNumber && Submitting && ErrorMessage}
           </div>
         </div>
 
@@ -81,9 +102,12 @@ const CheckOut = ({ Submitting }) => {
             <input
               onChange={(e) => setAddress(e.target.value)}
               value={address}
-              className={Classes.fullLength}
+              className={`${Classes.fullLength} ${
+                !address && Submitting ? Classes.errorInput : ""
+              }`}
               type="text"
             />
+            {!address && Submitting && ErrorMessage}
           </div>
 
           <div className={Classes.rowSections}>
@@ -93,7 +117,9 @@ const CheckOut = ({ Submitting }) => {
                 onChange={(e) => setZipCode(e.target.value)}
                 value={zipCode}
                 type="number"
+                className={!zipCode && Submitting ? Classes.errorInput : ""}
               />
+              {!zipCode && Submitting && ErrorMessage}
             </div>
             <div className={Classes.labelposition}>
               <label>City</label>
@@ -101,7 +127,9 @@ const CheckOut = ({ Submitting }) => {
                 onChange={(e) => setCity(e.target.value)}
                 value={city}
                 type="text"
+                className={!city && Submitting ? Classes.errorInput : ""}
               />
+              {!city && Submitting && ErrorMessage}
             </div>
           </div>
           <div className={Classes.labelposition}>
@@ -110,7 +138,9 @@ const CheckOut = ({ Submitting }) => {
               onChange={(e) => setCountry(e.target.value)}
               value={country}
               type="text"
+              className={!country && Submitting ? Classes.errorInput : ""}
             />
+            {!country && Submitting && ErrorMessage}
           </div>
         </div>
 
@@ -144,7 +174,11 @@ const CheckOut = ({ Submitting }) => {
                 onChange={(e) => setEMoneyNumber(e.target.value)}
                 value={eMoneyNumber}
                 type="number"
+                className={
+                  !eMoneyNumber && Submitting ? Classes.errorInput : ""
+                }
               />
+              {!eMoneyNumber && Submitting && ErrorMessage}
             </div>
             <div className={Classes.labelposition}>
               <label>e-money Pin</label>
@@ -152,7 +186,9 @@ const CheckOut = ({ Submitting }) => {
                 onChange={(e) => setEMoneyPin(e.target.value)}
                 value={eMoneyPin}
                 type="number"
+                className={!eMoneyPin && Submitting ? Classes.errorInput : ""}
               />
+              {!eMoneyPin && Submitting && ErrorMessage}
             </div>
           </div>
         </div>

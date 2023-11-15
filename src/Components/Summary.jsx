@@ -1,8 +1,11 @@
 import Classes from "../assets/Css/Summary.module.css";
 import CartProducts from "./CartProducts";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import ConfirmationMessage from "./ConfirmationMessage";
+import Cart from "./Cart";
 
-const Summary = ({ Submitting }) => {
+const Summary = ({ Submitting, errorsubmit }) => {
   const Data = useSelector((state) => state.cart.items);
   const Vat = Data.reduce(
     (accumulator, prod) => accumulator + prod.price * 0.2,
@@ -44,14 +47,15 @@ const Summary = ({ Submitting }) => {
           <span>Vat(included)</span>$ {VatFixed}
         </h3>
         <h3>
-          {" "}
-          <span>Grand Total</span>{" "}
+          <span>Grand Total</span>
           <span style={{ color: " #D87D4A", opacity: "1" }}>${GrandTotal}</span>
         </h3>
+
         <button onClick={Submit} className={Classes.btn}>
           Continue and Pay
         </button>
       </div>
+      {!errorsubmit && Submitting && <ConfirmationMessage />}
     </div>
   );
 };

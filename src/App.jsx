@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import SingleProductPage from "./Pages/SingleProductPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CheckoutPage from "./Pages/CheckoutPage";
+
 function App() {
   const [open, SetOpen] = useState(false);
 

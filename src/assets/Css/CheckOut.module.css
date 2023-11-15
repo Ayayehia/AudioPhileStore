@@ -40,7 +40,12 @@ input {
   border: 1px solid #cfcfcf;
   background: #fff;
 }
-
+input:focus {
+  border: 1px solid #d87d4a;
+}
+.errorInput {
+  border: 1px solid red;
+}
 .labelposition {
   display: flex;
   flex-direction: column;
@@ -65,6 +70,9 @@ input {
   line-height: 25px;
   letter-spacing: 0.929px;
   text-transform: uppercase;
+}
+.errorMessage {
+  color: red;
 }
 /* Tablet */
 @media (max-width: 1024px) {
