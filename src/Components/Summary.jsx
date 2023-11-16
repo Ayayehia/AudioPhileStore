@@ -4,8 +4,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ConfirmationMessage from "./ConfirmationMessage";
 import Cart from "./Cart";
+import { useEffect } from "react";
 
-const Summary = ({ Submitting, errorsubmit }) => {
+const Summary = ({ Submitting, errorsubmit, submit }) => {
   const Data = useSelector((state) => state.cart.items);
   const Vat = Data.reduce(
     (accumulator, prod) => accumulator + prod.price * 0.2,
@@ -19,9 +20,19 @@ const Summary = ({ Submitting, errorsubmit }) => {
   const GrandTotal = TotalPrice + Vat + 50;
   const item = Data.find((item) => item.id === item.id);
   const Quantity = item ? item.quantity : 0;
+
   const Submit = () => {
     Submitting(true);
+    if (submit && errorsubmit) {
+      Submitting(false);
+    } else {
+      Submitting(true);
+    }
   };
+
+  console.log(errorsubmit, "errorsubmit state");
+  console.log(submit, "Submitting state");
+
   return (
     <div className={Classes.container}>
       <div className={Classes.CartContainer}>
@@ -55,7 +66,7 @@ const Summary = ({ Submitting, errorsubmit }) => {
           Continue and Pay
         </button>
       </div>
-      {!errorsubmit && Submitting && <ConfirmationMessage />}
+      {!errorsubmit && submit && <ConfirmationMessage />}
     </div>
   );
 };

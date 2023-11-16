@@ -5,7 +5,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import { useEffect, useState } from "react";
 
-const CheckOut = ({ Submitting, errorsubmit }) => {
+const CheckOut = ({ Submitting, errorsubmit, error }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -20,21 +20,21 @@ const CheckOut = ({ Submitting, errorsubmit }) => {
   useEffect(() => {
     // Validation logic
     if (
-      !name ||
-      !email ||
-      !phoneNumber ||
-      !address ||
-      !zipCode ||
-      !city ||
-      !country ||
-      !eMoneyNumber ||
-      !eMoneyPin
+      name.trim() !== "" &&
+      email.trim() !== "" &&
+      phoneNumber.trim() !== "" &&
+      address.trim() !== "" &&
+      zipCode.trim() !== "" &&
+      city.trim() !== "" &&
+      country.trim() !== "" &&
+      eMoneyNumber.trim() !== "" &&
+      eMoneyPin.trim() !== ""
     ) {
-      // Set errorsubmit to true
-      errorsubmit(true);
-    } else {
       // Set errorsubmit to false
       errorsubmit(false);
+    } else {
+      // Set errorsubmit to true
+      errorsubmit(true);
     }
   }, [
     name,
@@ -46,10 +46,10 @@ const CheckOut = ({ Submitting, errorsubmit }) => {
     country,
     eMoneyNumber,
     eMoneyPin,
-  ]); // Empty dependency array means this effect runs once when the component mounts
+  ]);
 
   console.log(Submitting, "CHnaging state after submitting");
-
+  console.log(error, "error condition");
   const ErrorMessage = (
     <p className={Classes.errorMessage}>Field can't be empty</p>
   );

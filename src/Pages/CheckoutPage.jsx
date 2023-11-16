@@ -8,8 +8,16 @@ const CheckoutPage = () => {
   const [errorSubmit, SeterrorSubmit] = useState(false);
   return (
     <div className={classes.pageContainer}>
-      <CheckOut Submitting={submit} errorsubmit={SeterrorSubmit} />
-      <Summary Submitting={SetSubmit} errorsubmit={errorSubmit} />
+      <CheckOut
+        Submitting={submit}
+        errorsubmit={SeterrorSubmit}
+        error={errorSubmit}
+      />
+      <Summary
+        submit={submit}
+        Submitting={SetSubmit}
+        errorsubmit={errorSubmit}
+      />
     </div>
   );
 };

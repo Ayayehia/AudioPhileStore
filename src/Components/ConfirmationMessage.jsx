@@ -5,7 +5,7 @@ import CartProducts from "./CartProducts";
 import Classes from "../assets/Css/Summary.module.css";
 import { Link } from "react-router-dom";
 import Classe from "../assets/Css/ConfirmationMessage.module.css";
-const ConfirmationMessage = () => {
+const ConfirmationMessage = ({ errorSubmit }) => {
   const Data = useSelector((state) => state.cart.items);
   const totalPrice = Data.reduce((total, item) => total + item.totalPrice, 0);
 
@@ -36,7 +36,7 @@ const ConfirmationMessage = () => {
               />
             ))}
           </section>
-          <p className={Classe.grandPrice}>GrandTotal:{totalPrice}</p>
+          <p className={Classe.grandPrice}>GrandTotal:${totalPrice}</p>
         </section>
         <Link to={"/"}>
           <button className={Classes.btn}>Back To Home</button>

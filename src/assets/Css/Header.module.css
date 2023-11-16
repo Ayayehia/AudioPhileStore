@@ -1,59 +1,72 @@
-
-.container{
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;
-    width:100%;
-    height:28px;
-    background-color:#141414;
-    color:#FFFFFF;
-    padding: 2%;
-    position: fixed;
-    z-index: 9000;
-    top: 0;
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  background-color: #141414;
+  color: #ffffff;
+  padding: 2%;
+  position: fixed;
+  z-index: 9000;
+  top: 0;
 }
-
 
 .linksContainer {
-   display:flex;
-   justify-content:space-between;
-   gap:34px;
-    font-family: Manrope;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 25px; 
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  gap: 34px;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
-
-a{text-decoration: none;color: #FFFFFF;}
-.linksContainer a:hover{
-  color: #D87D4A;
+svg {
+  cursor: pointer;
 }
-@media (min-width: 768px) { svg.menuIcon{display: none}
-
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.linksContainer a:hover {
+  color: #d87d4a;
+}
+@media (min-width: 768px) {
+  svg.menuIcon {
+    display: none;
+  }
 }
 /* Styles for tablets (width >= 768px) */
 
 @media (max-width: 768px) {
-    .linksContainer{display:none}
-    
-    .container{justify-content: space-between;
-     
-    }
-    .logoContainer{  display: flex;
-        gap: 10%}
-    svg.menuIcon{display: block}
-  }
-  
-  /* Styles for mobile devices (width <= 375px) */
-  @media (max-width: 375px) {
-    .linksContainer{display:none}
-    .container{justify-content: space-evenly;
-   
-    }
-    svg.menuIcon{display: block}
-
+  .linksContainer {
+    display: none;
   }
 
+  .container {
+    justify-content: space-between;
+  }
+  .logoContainer {
+    display: flex;
+    gap: 10%;
+  }
+  svg.menuIcon {
+    display: block;
+  }
+}
+
+/* Styles for mobile devices (width <= 375px) */
+@media (max-width: 375px) {
+  .linksContainer {
+    display: none;
+  }
+  .container {
+    justify-content: space-evenly;
+  }
+  svg.menuIcon {
+    display: block;
+  }
+}

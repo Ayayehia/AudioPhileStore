@@ -12,6 +12,7 @@
   color: black;
   border: none;
   background: #f1f1f1;
+  cursor: pointer;
 }
 
 @media (max-width: 375px) {
