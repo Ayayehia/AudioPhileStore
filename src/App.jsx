@@ -24,9 +24,12 @@ function App() {
         },
         {
           path: "category/:category",
-          element: <CategoryPage openCart={open} />,
+          element: <CategoryPage openCart={open} funcOpen={Open} />,
         },
-        { path: "product/:id", element: <SingleProductPage openCart={open} /> },
+        {
+          path: "product/:id",
+          element: <SingleProductPage openCart={open} funcOpen={Open} />,
+        },
         { path: "checkout", element: <CheckoutPage /> },
       ],
       // headPhones

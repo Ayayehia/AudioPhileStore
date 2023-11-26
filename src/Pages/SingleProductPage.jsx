@@ -1,40 +1,51 @@
-import ProductsLayout from "../Components/ProductsLayout"
-import MyData from "../Api/MyDataTwo.json"
-import Features from "../Components/Features"
-import GallerySection from "../Components/GallerySection"
-import OtherProductsLayout from "../Components/OtherProductsLayout"
-import CategoryButtons from "../Components/CategoryButtons"
-import ArticleSection from "../Components/ArticleSection"
-import Footer from "../Components/Footer"
-import { useParams } from "react-router-dom"
-import Cart from "../Components/Cart"
+import ProductsLayout from "../Components/ProductsLayout";
+import MyData from "../Api/MyDataTwo.json";
+import Features from "../Components/Features";
+import GallerySection from "../Components/GallerySection";
+import OtherProductsLayout from "../Components/OtherProductsLayout";
+import CategoryButtons from "../Components/CategoryButtons";
+import ArticleSection from "../Components/ArticleSection";
+import Footer from "../Components/Footer";
+import { useParams } from "react-router-dom";
+import Cart from "../Components/Cart";
+import { useEffect } from "react";
+const SingleProductPage = ({ openCart, funcOpen }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  console.log(openCart, "open prop in SingleProduct");
+  //  const EarPhones = MyData.filter((category)=>category.category=="earphones")
 
-const SingleProductPage = ({openCart}) => {
-    console.log(openCart,"open prop in SingleProduct")
-//  const EarPhones = MyData.filter((category)=>category.category=="earphones")
- 
- const {id} = useParams();
+  const { id } = useParams();
 
- const Filtered =MyData.filter((prod)=>prod.id==id)
+  const Filtered = MyData.filter((prod) => prod.id == id);
 
-
- console.log(id,"ID using param in single product")
- console.log( Filtered,"Filtered product by id")
-// this data is just for styling purposes will change this data later
+  console.log(id, "ID using param in single product");
+  console.log(Filtered, "Filtered product by id");
+  // this data is just for styling purposes will change this data later
   return (
- <>
-    {Filtered.map((prod)=> <ProductsLayout key={prod.id} price={prod.price} data={prod} style={"singleProductContainer" }styleTwo={"leftSectionSingleProduct"} styleThree={"rightSectionSingle"} buttonText={"Add To Cart"}/>
-)}
-{openCart && <Cart/> }
+    <>
+      {Filtered.map((prod) => (
+        <ProductsLayout
+          key={prod.id}
+          price={prod.price}
+          data={prod}
+          style={"singleProductContainer"}
+          styleTwo={"leftSectionSingleProduct"}
+          styleThree={"rightSectionSingle"}
+          buttonText={"Add To Cart"}
+        />
+      ))}
+      {openCart && <Cart funcOpen={funcOpen} />}
 
-<Features data={Filtered}/>
-<GallerySection data={Filtered}/>
-<OtherProductsLayout data={Filtered}/>
-<CategoryButtons style={"productWrapper"}/>
-<ArticleSection style={"productContainer"}/>
-<Footer/>
-   </>
-  )
-}
+      <Features data={Filtered} />
+      <GallerySection data={Filtered} />
+      <OtherProductsLayout data={Filtered} />
+      <CategoryButtons style={"productWrapper"} />
+      <ArticleSection style={"productContainer"} />
+      <Footer />
+    </>
+  );
+};
 
-export default SingleProductPage
+export default SingleProductPage;
