@@ -21,11 +21,9 @@ const CartProducts = ({ data, style, styleTwo, ShowQuantity }) => {
   return (
     <div className={`${Classes[styleTwo]}`}>
       <div className={Classes.img}>
-        {" "}
         <img className={Classes.img} src={image} />
       </div>
       <div className={Classes.textSection}>
-        {" "}
         <h1 className={Classes.title}>{name}</h1>
         <p>${price}</p>
       </div>
