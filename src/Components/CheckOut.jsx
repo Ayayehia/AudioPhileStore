@@ -48,7 +48,7 @@ const CheckOut = ({ Submitting, errorsubmit, error }) => {
     eMoneyPin,
   ]);
 
-  console.log(Submitting, "CHnaging state after submitting");
+  console.log(Submitting, "Changing state after submitting");
   console.log(error, "error condition");
   const ErrorMessage = (
     <p className={Classes.errorMessage}>Field can't be empty</p>

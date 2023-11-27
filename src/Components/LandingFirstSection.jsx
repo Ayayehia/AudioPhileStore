@@ -1,4 +1,4 @@
-import FireBaseData from "../Api/FireBaseData";
+// import FireBaseData from "../Api/FireBaseData";
 import Image from "/home/desktop/image-hero.jpg";
 import ImageTablet from "/home/tablet/image-header.jpg";
 import ImageMobile from "/home/mobile/image-header.jpg";
@@ -6,9 +6,10 @@ import Classes from "../assets/Css/LandingFirstSection.module.css";
 import { Link } from "react-router-dom";
 
 const LandingFirstSection = () => {
-  const { products } = FireBaseData();
-  const product = products[0];
-  if (!product) return <h1>Loading...</h1>;
+  // const { products } = FireBaseData();
+  // const product = products[0];
+  // if (!product) return <h1>Loading...</h1>;
+
   return (
     <section className={Classes.container}>
       <article className={Classes.leftSection}>
@@ -20,32 +21,29 @@ const LandingFirstSection = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        {product && product.id && (
-          <button>
-            <Link to={`/product/${product.id}`}>SEE PRODUCT</Link>
-          </button>
-        )}
+        <button>
+          <Link to={`/product/4`}>SEE PRODUCT</Link>
+        </button>
       </article>
       <figure className={Classes.imgContainer}>
         <img
           className={Classes.imageDesktop}
           src={Image}
-          alt={`Image for ${product.name}`}
+          alt={`Image for Desktop`}
         />
         <img
           className={Classes.imageTablet}
           src={ImageTablet}
-          alt={`Image for ${product.name}`}
+          alt={`Image for Tablet`}
         />
         <img
           className={Classes.imageMobile}
           src={ImageMobile}
-          alt={`Image for ${product.name}`}
+          alt={`Image for Mobile`}
         />
       </figure>
     </section>
   );
 };
-// 768
-// src={window.outerWidth <= 375 ? ImageMobile :window.outerWidth <= 768 ? ImageTablet : Image}
+
 export default LandingFirstSection;
