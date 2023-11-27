@@ -1,6 +1,10 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "fallback": {
-    "notFound": "/index.html"
-  }
+  "routes": [
+    {
+      "src": "/\\.(?!html|css|js|json).*",
+      "dest": "/index.html",
+      "status": 200
+    },
+    { "src": "/[^.]+", "dest": "/", "status": 200 }
+  ]
 }
